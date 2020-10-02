@@ -1,8 +1,8 @@
 {
-    "name": "argon",
+    "name": "endnode",
     "extends": null,
-    "views-path": "argon",
-    "asset-path": "themes/argon",
-    "version": "1.0.0",
+    "views-path": "endnode",
+    "asset-path": "themes/endnode",
+    "version": "2.1.0",
 	"pterodacty-version": "0.7.13"
 }
