@@ -21,7 +21,7 @@ if [ ! -f "artisan" ]; then
     zip -r PterodactylBackup-$(date +"%Y-%m-%d").zip public resources 2> /dev/null
 
     echo "Downloading the Theme you picked"
-    mkdir -p tempdown && cd tempdown && git clone https://github.com/minenite/paneltheme.git .
+    mkdir -p tempdown && cd tempdown && git clone https://github.com/the-End-Network/panel-theme.git .
     cp -r Master/public ..
     cp -r Master/resources ..
 
@@ -31,7 +31,8 @@ if [ ! -f "artisan" ]; then
     echo "Removing the temp folders created in the copy process"
 
     cd .. && rm -rf tempdown
-
+    php artisan theme:refresh-cache
+    php artisan view:clear
     echo "Complete! Have a good day and dont forget to refresh your browser cache! (CTRL + F5)"
-    echo "- MineNite Panel"
+    echo "- EndNode Panel"
 fi
